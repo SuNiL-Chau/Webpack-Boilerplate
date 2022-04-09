@@ -1,0 +1,42 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "scripts": {
+    "build": "webpack --config configs/webpack.dev.config.js --mode=development",
+    "watch": "webpack --config configs/webpack.dev.config.js --mode=development --watch",
+    "bundle": "npm install && npm run watch",
+    "dev": "webpack serve --config configs/webpack.dev.config.js --mode=development",
+    "production": "webpack --config configs/webpack.prod.config.js --mode=production",
+    "stats": "webpack --config configs/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+  },
+  "keywords": [],
+  "author": "Sunil Chaudhary",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
