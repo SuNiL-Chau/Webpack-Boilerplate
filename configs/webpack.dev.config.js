@@ -22,7 +22,7 @@ module.exports = merge(webpackConfiguration, {
     },
     open: true,
     compress: true,
-    hot: false,
+    hot: true,
     ...environment.server,
   },
 
