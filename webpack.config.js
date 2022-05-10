@@ -50,23 +50,28 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
         type: "asset/resource",
-        generator: {
-          publicPath: "images/",
-          outputPath: "images/",
-        },
+        // generator: {
+        //   publicPath: "images/",
+        //   outputPath: "images/",
+        // },
       },
       {
         test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         type: "asset/resource",
-        generator: {
-          publicPath: "fonts/",
-          outputPath: "fonts/",
-        },
+        // generator: {
+        //   publicPath: "fonts/",
+        //   outputPath: "fonts/",
+        // },
       },
     ],
   },
